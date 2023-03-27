@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferente ou simplismente diminua e aumente o tamanho do seu navegador</p>
+    <!-- Precisa ser na ordem do maior para menor -->
+    <picture>
+        <!-- se a pagina for menor que 750px ele vai carregar a imagem pequena para não ter barra de rolagem lateral -->
+    <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+    <!-- se a pagina for menor que 1050px ele vai carregar a imagem media para não ter barra de rolagem lateral -->
+    <source media="(max-width: 1050px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a reproduzir audios no HTML5.</p>
+    <!-- Maneira simples -->  
+    <!-- autoplay para reproduzir sozinho -->
+    <audio src="midia/oh fire.mp3" controls ></audio>
+    <!-- Maneira indicada para ter mais possibilidade de compatibilidade com os navegadores -->
+    <audio controls preload="metadata">
+        <!-- Começa tentando por ordem (mp3) -->
+        <source src="midia/soul food.mp3" type="audio/mpeg">
+        <source src="midia/soul food.ogg" type="audio/ogg">
+        <source src="midia/soul food.wav" type="audio/wav">
+    </audio>
+</body>
+</html>
